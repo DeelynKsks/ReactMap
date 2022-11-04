@@ -3,11 +3,11 @@ export const dictionary = {
 
         const coordenadas = c.target.value.split(",")
 
-        return console.log(coordenadas)
+        return coordenadas
 
     },
 
-    direccion:(c) => {
+    descripcion:(c) => {
 
         const lista = c.target
 
@@ -20,6 +20,6 @@ export const dictionary = {
             if (lista[i].value == coordenadas1) descripcion = lista[i].id
         }
         
-        return console.log(descripcion)
+        return descripcion
     }
 }

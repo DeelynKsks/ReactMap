@@ -6,14 +6,26 @@ import Mapita from './Components/Mapita';
 import { dictionary } from './Helpers/dictionary';
 
 function App() {
-  
-  const coords = dictionary.coordenadas
-  const desc = dictionary.direccion
+
+  // const valores = () => {
+  //   AuthConext.provider value={(
+  //     coordenadas,
+      
+  //   )}
+  // }
+  const [cords, setCords]= useState();
+  const [direc, setDirec] = useState();
+  const traer = (a) => {
+    const cordinates = dictionary.coordenadas(a)
+    setCords(cordinates)
+    setDirec(dictionary.descripcion(a))
+    console.log(cords, direc)
+  }
 
   return (
     <div>
-      <Select/>
-      <Mapita/>
+      <Select captura={traer} />
+      <Mapita mostrar={cords} desc={direc}/>
     </div>
   )
 }
