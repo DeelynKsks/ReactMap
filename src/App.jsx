@@ -4,6 +4,7 @@ import './App.css'
 import Select from './Components/Select';
 import Mapita from './Components/Mapita';
 import { dictionary } from './Helpers/dictionary';
+import MapView from './Components/Map/MapView';
 
 function App() {
 
@@ -13,20 +14,17 @@ function App() {
       
   //   )}
   // }
-  const [cords, setCords]= useState();
-  const [direc, setDirec] = useState();
-  const traer = (a) => {
-    const cordinates = dictionary.coordenadas(a)
-    setCords(cordinates)
-    setDirec(dictionary.descripcion(a))
-    console.log(cords, direc)
-  }
+  // const [cords, setCords]= useState();
+  // const [direc, setDirec] = useState();
+  
+  // const traer = (a) => {
+  //   const cordinates = dictionary.coordenadas(a)
+  //   setCords(cordinates)
+  //   setDirec(dictionary.descripcion(a))
+  // }
 
   return (
-    <div>
-      <Select captura={traer} />
-      <Mapita mostrar={cords} desc={direc}/>
-    </div>
+      <MapView/>
   )
 }
 
