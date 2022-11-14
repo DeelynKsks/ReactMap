@@ -5,6 +5,7 @@ import Select from './Components/Select';
 import Mapita from './Components/Mapita';
 import { dictionary } from './Helpers/dictionary';
 import MapView from './Components/Map/MapView';
+import Markers from './Components/Map/Markers';
 
 function App() {
 
@@ -24,7 +25,11 @@ function App() {
   // }
 
   return (
+    <div>
+      <Select />
       <MapView/>
+      
+    </div>
   )
 }
 

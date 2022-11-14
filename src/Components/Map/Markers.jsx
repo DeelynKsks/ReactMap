@@ -1,10 +1,11 @@
+import { Marker } from 'leaflet'
 import React from 'react'
 
 function Markers() {
 
     //Tenés que seguir con los markers. Estás haciendo todo de nuevo.
   return (
-    <div>Markers</div>
+    <Marker position={['-26.18489', '-58.17313']}/>
   )
 }
 
