@@ -8,6 +8,7 @@ function App() {
 
   const [ coords, setCoords ] = useState([-26.18489, -58.17313])
   const [ desc, setDesc] = useState('Ciudad de Formosa')
+  
   return (
       <MapContext.Provider value={{coords, setCoords, desc, setDesc}}>
         <Select />

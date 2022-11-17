@@ -5,7 +5,6 @@ import { MapContext } from './../../Context/MapContext';
 function MapView() {
     
   const { coords, desc } = useContext(MapContext)
-  
   // Este es tu nuevo map, el otro dejalo de lado por ahora.
 
   return (

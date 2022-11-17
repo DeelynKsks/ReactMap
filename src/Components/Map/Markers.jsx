@@ -1,3 +1,4 @@
+import { Marker } from 'leaflet'
 import React from 'react'
 import { Marker, Popup } from 'react-leaflet';
 
@@ -10,6 +11,7 @@ function Markers() {
         Ciudad de Formosa
       </Popup>
     </Marker>
+    
   )
 }
 
