@@ -18,9 +18,7 @@ const Select = () => {
   // }
  
   return (
-    <select name="select-location" id="select-location" 
-    // onChange={exportar}
-    >
+    <select name="select-location" id="select-location">
       <Options/>
     </select>
   )

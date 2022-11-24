@@ -1,26 +1,23 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { dictionary } from './../Helpers/dictionary';
 
 function Options() {
 
+    const [ opt, setOpt] = useState([])
+    
     const traer = async() => {
         const list = await dictionary.traer()
-
-        list.map(()=>{
-            <option value={list.Coordenadas}>{list.Descripcion}</option>
-        })
-        
+        setOpt(list)
     }
+    useEffect(() => {traer()}, [])
+    const renderizar = opt.map(asd => asd.Descripcion)
+    
     return (
-        <>
-            {async() => {
-                const list = await dictionary.traer()
-
-                list.map(()=>{
-                    return <option value={list.Coordenadas}>{list.Descripcion}</option>
-                })
-            }}
-        </>
+           <>
+            {renderizar.map((kkk, index) => <option key={index}>{kkk}</option>)}
+           </>
+           
     )
 }
 
