@@ -11,11 +11,11 @@ function Options() {
         setOpt(list)
     }
     useEffect(() => {traer()}, [])
-    const renderizar = opt.map(asd => asd.Descripcion)
+    const renderizar = opt.map(asd => [asd.Descripcion, asd.Coordenadas])
     
     return (
            <>
-            {renderizar.map((kkk, index) => <option key={index}>{kkk}</option>)}
+            {renderizar.map((kkk, index) => <option value={kkk[1]} id={kkk[0]} key={index}>{kkk[0]}</option>)}
            </>
            
     )

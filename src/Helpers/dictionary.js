@@ -1,7 +1,7 @@
 export const dictionary = {
     coordenadas:(c) => {
 
-        const coordenadas = c.target.value.split(", ")
+        const coordenadas = c.target.value.split(",")
 
         return(coordenadas)
 
