@@ -19,7 +19,6 @@ const Select = () => {
  
   return (
     <select name="select-location" id="select-location" onChange={exportar}>
-      <option value="-26.18489, -58.17313">Formosa</option>
       <Options/>
     </select>
   )

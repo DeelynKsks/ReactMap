@@ -1,17 +1,25 @@
-import { Marker } from 'leaflet'
-import React from 'react'
-import { Marker, Popup } from 'react-leaflet';
-
+import { React, useContext } from 'react'
+import { Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
+import { MapContext } from './../../Context/MapContext';
+import logo from './img/icon.jpeg'
 function Markers() {
 
-    //Tenés que seguir con los markers. Estás haciendo todo de nuevo.
+  const { coords, desc } = useContext(MapContext);
+
+  // const imgRender = () => {
+  //   return <div><img id='imagen' src={logo} alt=""/>{desc}</div>
+  // }
+  // {(desc == 'Polo Científico')?imgRender():desc}
+  const mapita = useMap()
+  mapita.flyTo(coords, mapita.getZoom(8))
+  
+  //Tenés que seguir con los markers. Estás haciendo todo de nuevo.
   return (
-    <Marker position={['-26.18489', '-58.17313']}>
+    <Marker position={coords}>
       <Popup>
-        Ciudad de Formosa
+        {desc}
       </Popup>
     </Marker>
-    
   )
 }
 
