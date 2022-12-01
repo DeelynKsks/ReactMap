@@ -1,7 +1,7 @@
 import { React, useContext } from 'react'
 import { Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 import { MapContext } from './../../Context/MapContext';
-import logo from './img/icon.jpeg'
+import logo from '../../img/WhatsApp Image 2022-11-01 at 12.15.36.jpeg'
 function Markers() {
 
   const { coords, desc } = useContext(MapContext);
