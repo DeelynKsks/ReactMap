@@ -8,9 +8,11 @@ function MapView() {
 
   const { coords } = useContext(MapContext)
   
+  console.log(coords)
+
   return (
     <div id='cuadrito'>
-      <MapContainer id="map" center={coords} zoom={12}>
+      <MapContainer id="map" center={coords} zoom={13}>
           <DisplayPosition/>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'/>
           <Markers/>

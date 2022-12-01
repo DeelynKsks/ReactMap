@@ -15,7 +15,7 @@ function Options() {
     
     return (
            <>
-            <option value="-26.18489, -58.17313">Formosa</option>
+            <option value="-26.18489, -58.17313" id='Ciudad de Formosa'>Seleccionar</option>
             {renderizar.map((kkk, index) => <option value={kkk[1]} id={kkk[0]} key={index}>{kkk[0]}</option>)}
            </>
            

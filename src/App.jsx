@@ -8,12 +8,13 @@ function App() {
   
   const [ coords, setCoords ] = useState([-26.18489, -58.17313])
   const [ desc, setDesc] = useState('Ciudad de Formosa')
-  const [ mapita, setMapita ] = useState(null)
+  const [ location, setLocation ] = useState([])
 
   return (
-      <MapContext.Provider value={{coords, setCoords, desc, setDesc, mapita, setMapita}}>
+      <MapContext.Provider value={{coords, setCoords, desc, setDesc, location, setLocation}}>
         <Select/>
         <MapView />
+        
       </MapContext.Provider>
   )
 }
